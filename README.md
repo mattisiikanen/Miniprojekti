@@ -21,7 +21,7 @@ Windows VM:
 - CPU: 2 CPU
 - RAM: 4Gb 
 - HDD: 60Gb
-- OS: Windows Server 2019
+- OS: Windows Server 2022
 
 Looginen näkymä ympäristöstä: </br>
 ![Kuva1](https://user-images.githubusercontent.com/122887740/235692836-e1d3a962-0730-48be-aaf7-3396b811d41b.png)
