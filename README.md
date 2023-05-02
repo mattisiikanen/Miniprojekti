@@ -31,5 +31,5 @@ Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-
 
 ## Lähteet:
 - Karvinen, Tero, 28.3.2023, Salt Vagrant - automatically provision one master and two slaves - (https://terokarvinen.com/2023/salt-vagrant/)
-- Scherer, Stefan, 14.2.2019, StefanScherer/windows_2016 Vagrant box - (https://app.vagrantup.com/StefanScherer/boxes/windows_2016)
+- HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
