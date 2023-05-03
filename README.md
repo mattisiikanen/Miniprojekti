@@ -26,7 +26,10 @@ Windows VM:
 Looginen näkymä ympäristöstä: </br>
 ![Kuva1](https://user-images.githubusercontent.com/122887740/235692836-e1d3a962-0730-48be-aaf7-3396b811d41b.png)
 
-Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, sekä Windows VM:ää varten Stefan Schererin sekä ClayShakin artikkeleista / ohjeista mallia.
+
+
+
+Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, sekä Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia.
 
 
 ## Lähteet:
