@@ -26,7 +26,7 @@ Windows VM:
 Looginen näkymä ympäristöstä: </br>
 ![Kuva1](https://user-images.githubusercontent.com/122887740/235692836-e1d3a962-0730-48be-aaf7-3396b811d41b.png)
 
-
+Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella.
 
 
 Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, sekä Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia.
