@@ -35,6 +35,12 @@ Palvelimet:
 - wminion001 (Windows, Salt-Minion, Active Directory)
 
 
+Verkko:
+- Hostin oma verkko, johon se on kytketty
+- Saltin hallintaverkko (192.168.12.1/24)
+  * DHCP ei kytkettynä päälle
+
+
 Looginen näkymä ympäristöstä: </br>
 ![Kuva1](https://user-images.githubusercontent.com/122887740/235692836-e1d3a962-0730-48be-aaf7-3396b811d41b.png)
 
