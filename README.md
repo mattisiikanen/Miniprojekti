@@ -52,3 +52,4 @@ Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa
 - Karvinen, Tero, 28.3.2023, Salt Vagrant - automatically provision one master and two slaves - (https://terokarvinen.com/2023/salt-vagrant/)
 - HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
+- SaltStack, 4.4.2023, vTHE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
