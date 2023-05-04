@@ -45,7 +45,7 @@ Looginen näkymä ympäristöstä: </br>
 - Vapaata levytilaa n. 100Gb (todellisuudessa ympäristö vie vähemmän, mutta levyt ovat dynaamisia, jonka vuoksi suosittelen kyseistä määrää)
 
 ## Ympäristön käyttöönotto
-Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa perustettua / käynnistettyä ajamalla komennot ```vagrant init``` sekä ```vagrant up```.
+Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa perustettua / käynnistettyä ajamalla komennot ```vagrant init``` sekä ```vagrant up```. Kun ympäristö on pystyssä, tulee vielä hyväksyä orjien avaimet herrakoneella, tämä onnistuu komennoilla ```vagrant ssh mistermaster``` ja yhteyden muodostuksen jälkeen ```sudo salt-key -A```.
 
 
 ## Lähteet:
