@@ -1,23 +1,30 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+
+
+# Commands that are run at the target machine, when called upon. Order for running the commands is from top to bottom.
 $minion = <<MINION
 sudo apt-get update
 echo "master: 192.168.12.3">/etc/salt/minion
 sudo service salt-minion restart
-echo "See also: https://terokarvinen.com/2023/salt-vagrant/"
+echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MINION
 
 $master = <<MASTER
 sudo apt-get update
-echo "See also: https://terokarvinen.com/2023/salt-vagrant/"
+echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MASTER
 
 $wminion = <<MINION
 Restart-Service -Name salt-minion
+echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MINION
 
+
+# Define the ruleset used in Vagrant and the base VM box
 Vagrant.configure("2") do |config|
 config.vm.box = "debian/bullseye64"
+
 
 # Define Linux VMs
 	config.vm.define "lminion001" do |lminion001|
@@ -47,7 +54,6 @@ config.vm.box = "debian/bullseye64"
 		end
 		mistermaster.vm.provision :shell, inline: $master
 	end
-
 
 
 # Define Windows VM
