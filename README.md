@@ -40,7 +40,7 @@ Looginen näkymä ympäristöstä: </br>
 
 
 ## Esivaatimukset
-- Vagrant Salt asennettuna hallinta koneella
+- Vagrant Salt asennettuna hallintakoneella
 - VirtualBox
 - Vapaata levytilaa n. 100Gb (todellisuudessa ympäristö vie vähemmän, mutta levyt ovat dynaamisia, jonka vuoksi suosittelen kyseistä määrää)
 
