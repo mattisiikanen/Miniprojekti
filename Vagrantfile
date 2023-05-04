@@ -12,6 +12,7 @@ MINION
 
 $master = <<MASTER
 sudo apt-get update
+sudo mkdir /srv/salt
 echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MASTER
 
