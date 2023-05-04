@@ -26,10 +26,16 @@ Windows VM:
 Looginen näkymä ympäristöstä: </br>
 ![Kuva1](https://user-images.githubusercontent.com/122887740/235692836-e1d3a962-0730-48be-aaf7-3396b811d41b.png)
 
-Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella.
+## Tarkoitus
+Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. 
 
+## Esivaatimukset
+- Vagrant Salt asennettuna hallinta koneella
+- VirtualBox
+- Vapaata levytilaa n. 100Gb (todellisuudessa ympäristö vie vähemmän, mutta levyt ovat dynaamisia, jonka vuoksi suosittelen kyseistä määrää)
 
-Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, sekä Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia.
+## Ympäristön käyttöönotto
+Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa perustettua / käynnistettyä ajamalla komennot ```vagrant init``` sekä ```vagrant up```.
 
 
 ## Lähteet:
