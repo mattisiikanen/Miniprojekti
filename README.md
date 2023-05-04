@@ -53,3 +53,4 @@ Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa
 - HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
 - SaltStack, 4.4.2023, vTHE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
+- Karvinen, Tero, Control Windows with Salt, 18.4.2018 - (https://terokarvinen.com/2018/control-windows-with-salt/)
