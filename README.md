@@ -29,6 +29,13 @@ Looginen näkymä ympäristöstä: </br>
 ## Tarkoitus
 Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. 
 
+
+Palvelimet:
+- mistermaster (Linux, Salt-Master)
+- lminion001 (Linux, Salt-Minion, Mumble-palvelin)
+- lminion002 (Linux, Salt-Minion, Apache-palvelin)
+- wminion001 (Windows, Salt-Minion, Active Directory)
+
 ## Esivaatimukset
 - Vagrant Salt asennettuna hallinta koneella
 - VirtualBox
