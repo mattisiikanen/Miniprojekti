@@ -12,6 +12,7 @@ MINION
 
 $master = <<MASTER
 sudo apt-get update
+sudo apt-get -qy install git
 sudo mkdir /srv/salt
 sudo mkdir /srv/salt/win
 sudo cp -R /vagrant/SLS/* /srv/salt/
