@@ -13,6 +13,7 @@ MINION
 $master = <<MASTER
 sudo apt-get update
 sudo mkdir /srv/salt
+sudo cp /vagrant/config/top.sls /srv/salt/top.sls
 echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MASTER
 
