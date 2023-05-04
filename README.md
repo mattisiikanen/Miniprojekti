@@ -25,7 +25,7 @@ Windows VM:
 
 
 ## Tarkoitus
-Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. Provisioinnin aikana ```mistermaster``` koneelle kopioidaan kaikki hallintaan tarvittavat ```.sls``` tiedostot kansioon ```/srv/salt```.
+Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. Provisioinnin aikana ```mistermaster``` koneelle kopioidaan kaikki hallintaan tarvittavat ```.sls``` tiedostot kansioon ```/srv/salt```. Arkkitehtuuri on suunniteltu siten, että se asentaa valmiiksi tarvittavat työkalut ja jättää ylläpitäjälle mahdollisuuden konfiguroida itse ympäristön loppuun. Olen hakenut tällä takaa sitä, että kyseinen pohja ei ole suunniteltu ainaoastaan yhteen käyttöön, vaan sitä voi muutkin käyttää.
 
 
 Palvelimet:
@@ -46,6 +46,9 @@ Looginen näkymä ympäristöstä: </br>
 
 ## Ympäristön käyttöönotto
 Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa perustettua / käynnistettyä ajamalla komennot ```vagrant init``` sekä ```vagrant up```. Kun ympäristö on pystyssä, tulee vielä hyväksyä orjien avaimet herrakoneella, tämä onnistuu komennoilla ```vagrant ssh mistermaster``` ja yhteyden muodostuksen jälkeen ```sudo salt-key -A```.
+
+
+Kun herra-orja-arkkitehtuuri on saatu kuntoon, voi ajaa ```mistermaster``` koneella seuraavan komennon: ```sudo salt '*' state.apply``` tämä ajaa ```top.sls``` tiedoston, jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
 
 
 ## Lähteet:
