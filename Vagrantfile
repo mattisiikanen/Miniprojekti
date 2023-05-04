@@ -14,7 +14,7 @@ $master = <<MASTER
 sudo apt-get update
 sudo mkdir /srv/salt
 sudo mkdir /srv/salt/win
-sudo cp /vagrant/config/ /srv/salt/
+sudo cp -R /vagrant/SLS/* /srv/salt/
 sudo chown root.salt /srv/salt/win
 sudo chmod ug+rwx /srv/salt/win
 sudo salt-run winrepo.update_git_repos
