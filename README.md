@@ -70,7 +70,7 @@ Palvelimilla olevien sovelluksien käyttöönoton ja konfiguroinnin ohjeet on to
 
 ## Huomiot
 - Windows koneen provisointi jäätyy välillä -> korjauksena on poistaa kone virtualboxin kautta ja ajaa ```vagrant up``` uudelleen
-- Windows kone saattaa jäätyä välillä ja sen joutuu uudelleenkäynnistämään - (v0.1)
+- Windows kone saattaa jäätyä kesken käytön -> korjauksena on uudelleenkäynnistys - (v0.1) <- v0.2 jälkeen tätä ei ole enää tullut, koska resursseja nostettiin
 - Minion did not return. [No response] - tulee aina välillä -> korjauksena on ajaa komento vain uudelleen
 
 ## Lähteet:
