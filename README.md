@@ -18,8 +18,8 @@ Linux VMs:
 - OS: Debian
 
 Windows VM:
-- CPU: 2 CPU
-- RAM: 4Gb 
+- CPU: 4 CPU
+- RAM: 8Gb 
 - HDD: 60Gb
 - OS: Windows Server 2022
 
@@ -54,13 +54,23 @@ Looginen näkymä ympäristöstä: </br>
 Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa perustettua / käynnistettyä ajamalla komennot ```vagrant init``` sekä ```vagrant up```. Kun ympäristö on pystyssä, tulee vielä hyväksyä orjien avaimet herrakoneella, tämä onnistuu komennoilla ```vagrant ssh mistermaster``` ja yhteyden muodostuksen jälkeen ```sudo salt-key -A```. Provisioinnin yhteydessä olisi ollut mahdollisuus syöttää valmiiksi Salt-avaimet, mutta näin asian tietoturvariskinä ja päätin antaa koneiden luoda itse uudet avaimet jokaisella provisiointikerralla.
 
 
-Kun herra-orja-arkkitehtuuri on saatu kuntoon, voi ajaa ```mistermaster``` koneella seuraavan komennon: ```sudo salt '*' state.apply``` tämä ajaa ```top.sls``` tiedoston, jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
+Kun herra-orja-arkkitehtuuri on saatu kuntoon, tulee ```mistermaster``` koneella aloittaa päivittämällä Windowsin repositoriot aivan ensimmäiseksi komennolla ```sudo salt -G 'os:windows' pkg.refresh_db``` ja tämän jälkeen voi ajaa seuraavan komennon: ```sudo salt '*' state.apply```. Kyseinen komento ajaa kaikille orjakoneille niin sanotun TOP-tilan (```top.sls``` tiedoston), jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
 
+Ohjeet palvelimien sovelluksien jatkokonfigurointiin on toimitettu Linux koneilla kansioon ```/home/vagrant/``` ja Windows koneella ```C:\Admin```. 
+
+## Huomiot
+- Windows kone saattaa jäätyä välillä ja sen joutuu uudelleenkäynnistämään - (v0.1)
+- Minion did not return. [No response] - tulee aina välillä -> korjauksena on ajaa komento vain uudelleen
 
 ## Lähteet:
 - Karvinen, Tero, 28.3.2023, Infra as Code course, Palvelinten Hallinta 2023 kevät - (https://terokarvinen.com/2023/palvelinten-hallinta-2023-kevat/)
 - Karvinen, Tero, 28.3.2023, Salt Vagrant - automatically provision one master and two slaves - (https://terokarvinen.com/2023/salt-vagrant/)
+- Siikanen, Matti, 18.4.2023, H5 - Hello Web - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H5.md)
+- Siikanen, Matti, 18.4.2023, h6_based - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md)
 - HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
 - SaltStack, 4.4.2023, vTHE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
 - Karvinen, Tero, Control Windows with Salt, 18.4.2018 - (https://terokarvinen.com/2018/control-windows-with-salt/)
+- Mumble, 4.6.2020, Installing Mumble - (https://wiki.mumble.info/wiki/Installing_Mumble#Linux)
+- Mumble, 26.1.2021, Murmurguide - (https://wiki.mumble.info/wiki/Murmurguide)
+- Hill, Paul, 18.2.2021, Promote a Server to a Domain Controller - (https://www.serveracademy.com/blog/promote-a-server-to-a-domain-controller/)
