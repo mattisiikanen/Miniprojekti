@@ -25,14 +25,14 @@ Windows VM:
 
 
 ## Tarkoitus
-Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön Active Directory rooli, jolla hoidetaan identiteetin hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. Provisioinnin aikana luodaan yhteensä 4 virtuaalikonetta + 1 virtuaaliverkko Saltin hallintaa varten. ```Mistermaster``` koneelle kopioidaan kaikki hallintaan tarvittavat ```.sls``` tiedostot kansioon ```/srv/salt```. Arkkitehtuuri on suunniteltu siten, että se asentaa valmiiksi tarvittavat työkalut ja jättää ylläpitäjälle mahdollisuuden konfiguroida  ympäristön itse loppuun. Olen päätöksellä jättää tarkemmat konfiguraatiot ylläpitäjälle takaa sitä, että kyseistä pohjaa ei ole suunniteltu ainaoastaan yhteen käyttöön, vaan että sitä voisi käyttää muutkin.
+Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön sekä Active Directory että Print Server roolit, joilla hoidetaan identiteetin ja tulostimien hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. Provisioinnin aikana luodaan yhteensä 4 virtuaalikonetta + 1 virtuaaliverkko Saltin hallintaa varten. ```Mistermaster``` koneelle kopioidaan kaikki hallintaan tarvittavat ```.sls``` tiedostot kansioon ```/srv/salt```. Arkkitehtuuri on suunniteltu siten, että se asentaa valmiiksi tarvittavat työkalut ja jättää ylläpitäjälle mahdollisuuden konfiguroida  ympäristön itse loppuun. Olen päätöksellä jättää tarkemmat konfiguraatiot ylläpitäjälle takaa sitä, että kyseistä pohjaa ei ole suunniteltu ainaoastaan yhteen käyttöön, vaan että sitä voisi käyttää muutkin.
 
 
 Palvelimet:
 - mistermaster (Linux, Salt-Master)
 - lminion001 (Linux, Salt-Minion, Mumble-palvelin)
 - lminion002 (Linux, Salt-Minion, Apache-palvelin)
-- wminion001 (Windows, Salt-Minion, Active Directory)
+- wminion001 (Windows, Salt-Minion, Active Directory & Print server)
 
 
 Verkko:
