@@ -56,6 +56,8 @@ Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa
 
 Kun herra-orja-arkkitehtuuri on saatu kuntoon, tulee ```mistermaster``` koneella aloittaa päivittämällä Windowsin repositoriot aivan ensimmäiseksi komennolla ```sudo salt -G 'os:windows' pkg.refresh_db``` ja tämän jälkeen voi ajaa seuraavan komennon: ```sudo salt '*' state.apply```. Kyseinen komento ajaa kaikille orjakoneille niin sanotun TOP-tilan (```top.sls``` tiedoston), jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
 
+Ohjeet palvelimien sovelluksien jatkokonfigurointiin on toimitettu Linux koneilla kansioon ```/home/vagrant/``` ja Windows koneella ```C:\Admin```. 
+
 ## Huomiot
 - Windows kone saattaa jäätyä välillä ja sen joutuu uudelleenkäynnistämään - (v0.1)
 - Minion did not return. [No response] - tulee aina välillä -> korjauksena on ajaa komento vain uudelleen
