@@ -54,7 +54,7 @@ Looginen näkymä ympäristöstä: </br>
 Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa perustettua / käynnistettyä ajamalla komennot ```vagrant init``` sekä ```vagrant up```. Kun ympäristö on pystyssä, tulee vielä hyväksyä orjien avaimet herrakoneella, tämä onnistuu komennoilla ```vagrant ssh mistermaster``` ja yhteyden muodostuksen jälkeen ```sudo salt-key -A```. Provisioinnin yhteydessä olisi ollut mahdollisuus syöttää valmiiksi Salt-avaimet, mutta näin asian tietoturvariskinä ja päätin antaa koneiden luoda itse uudet avaimet jokaisella provisiointikerralla.
 
 
-Kun herra-orja-arkkitehtuuri on saatu kuntoon, voi ajaa ```mistermaster``` koneella seuraavan komennon: ```sudo salt '*' state.apply``` tämä ajaa ```top.sls``` tiedoston, jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
+Kun herra-orja-arkkitehtuuri on saatu kuntoon, tulee ```mistermaster``` koneella aloittaa päivittämällä Windowsin repositoriot aivan ensimmäiseksi komennolla ```sudo salt -G 'os:windows' pkg.refresh_db``` ja tämän jälkeen voi ajaa seuraavan komennon: ```sudo salt '*' state.apply```. Kyseinen komento ajaa kaikille orjakoneille niin sanotun TOP-tilan (```top.sls``` tiedoston), jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
 
 
 ## Lähteet:
