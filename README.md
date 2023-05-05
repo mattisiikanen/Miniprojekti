@@ -65,7 +65,8 @@ Ajettavat komennot vielä järjestyksessä:</br>
 - ```sudo salt '*' state.apply```
 
 
-Ohjeet palvelimien sovelluksien jatkokonfigurointiin on toimitettu Linux koneilla kansioon ```/home/vagrant/``` ja Windows koneella ```C:\Admin```. 
+Palvelimilla olevien sovelluksien käyttöönoton ja konfiguroinnin ohjeet on toimitettu Linux koneilla kansioon ```/home/vagrant/``` ja Windows koneella ```C:\Admin```. 
+
 
 ## Huomiot
 - Windows koneen provisointi jäätyy välillä -> korjauksena on poistaa kone virtualboxin kautta ja ajaa ```vagrant up``` uudelleen
