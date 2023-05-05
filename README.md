@@ -65,6 +65,8 @@ Ohjeet palvelimien sovelluksien jatkokonfigurointiin on toimitettu Linux koneill
 ## Lähteet:
 - Karvinen, Tero, 28.3.2023, Infra as Code course, Palvelinten Hallinta 2023 kevät - (https://terokarvinen.com/2023/palvelinten-hallinta-2023-kevat/)
 - Karvinen, Tero, 28.3.2023, Salt Vagrant - automatically provision one master and two slaves - (https://terokarvinen.com/2023/salt-vagrant/)
+- Siikanen, Matti, 18.4.2023, H5 - Hello Web - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H5.md)
+- Siikanen, Matti, 18.4.2023, h6_based - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md)
 - HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
 - SaltStack, 4.4.2023, vTHE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
