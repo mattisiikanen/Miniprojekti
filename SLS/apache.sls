@@ -12,3 +12,8 @@ apache.package:
 apache2.service:
   service.running:
     - full_restart: True
+
+/home/vagrant/apache_guide.md:
+ file.managed:
+  - source: "salt://readmes/apache_guide.md"
+  - mode: "0755"

@@ -1,0 +1,5 @@
+Tässä ohjeet Apachen konfigurointiin englanniksi: 
+https://www.serveracademy.com/blog/promote-a-server-to-a-domain-controller/
+
+Muista myös seurata tätä projektia sivuillani:
+https://github.com/mattisiikanen/Miniprojekti

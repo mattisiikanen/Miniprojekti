@@ -14,12 +14,13 @@ $master = <<MASTER
 sudo apt-get update
 sudo apt-get -qy install git
 sudo mkdir /srv/salt
+sudo mkdir /srv/salt/readmes
 sudo mkdir /srv/salt/win
 sudo cp -R /vagrant/SLS/* /srv/salt/
+sudo cp -R /vagrant/readmes/* /srv/salt/readmes
 sudo chown root.salt /srv/salt/win
 sudo chmod ug+rwx /srv/salt/win
 sudo salt-run winrepo.update_git_repos
-sudo salt -G 'os:windows' pkg.refresh_db
 echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MASTER
 
@@ -77,8 +78,9 @@ config.vm.box = "debian/bullseye64"
 		wminion001.vm.host_name = "wminion001"
 		wminion001.vm.network :forwarded_port, guest: 3389, host: 23389
 		wminion001.vm.network :forwarded_port, guest: 5985, host: 25985
-		wminion001.vm.provider "virtualbox" do |hv|
-			hv.memory = "4096"
+		wminion001.vm.provider "virtualbox" do |vb|
+			vb.cpus = 4
+			vb.memory = 8192
 		end	
 		wminion001.vm.provision :salt do |salt|
 			salt.install_type = "stable"

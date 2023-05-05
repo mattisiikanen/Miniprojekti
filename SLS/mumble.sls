@@ -8,3 +8,8 @@ mumble-server.service:
 
 'sudo ufw allow 64738':
   cmd.run
+
+/home/vagrant/mumble_guide.md:
+ file.managed:
+  - source: "salt://readmes/mumble_guide.md"
+  - mode: "0755"
