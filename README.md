@@ -18,8 +18,8 @@ Linux VMs:
 - OS: Debian
 
 Windows VM:
-- CPU: 2 CPU
-- RAM: 4Gb 
+- CPU: 4 CPU
+- RAM: 8Gb 
 - HDD: 60Gb
 - OS: Windows Server 2022
 
@@ -56,6 +56,9 @@ Ympäristöön tarvittavat tiedot saa ladattua tästä repositoriosta ja sen saa
 
 Kun herra-orja-arkkitehtuuri on saatu kuntoon, tulee ```mistermaster``` koneella aloittaa päivittämällä Windowsin repositoriot aivan ensimmäiseksi komennolla ```sudo salt -G 'os:windows' pkg.refresh_db``` ja tämän jälkeen voi ajaa seuraavan komennon: ```sudo salt '*' state.apply```. Kyseinen komento ajaa kaikille orjakoneille niin sanotun TOP-tilan (```top.sls``` tiedoston), jonka alle on määritetty erilaisia ```.sls```tiedostoja. Tilan saavutuksen jälkeen ympäristön idempotenttisuuden voi tarkistaa ajamalla aiemman komennon uudelleen. Tämän jälkeen Yritys Oy:n järjestelmien ylläpitäjällä on esiasennettu ympäristö valmiina konfigurointiin ja personointiin.
 
+## Huomiot
+- Windows kone saattaa jäätyä välillä ja sen joutuu uudelleenkäynnistämään
+- Minion did not return. [No response] - tulee aina välillä -> korjauksena on ajaa komento vain uudelleen
 
 ## Lähteet:
 - Karvinen, Tero, 28.3.2023, Infra as Code course, Palvelinten Hallinta 2023 kevät - (https://terokarvinen.com/2023/palvelinten-hallinta-2023-kevat/)
