@@ -42,7 +42,7 @@ Verkko:
 
 
 Looginen näkymä ympäristöstä: </br>
-![Kuva1](https://user-images.githubusercontent.com/122887740/235692836-e1d3a962-0730-48be-aaf7-3396b811d41b.png)
+![Infra](https://user-images.githubusercontent.com/122887740/236485392-289c3991-2de5-49c6-8a6d-01f263354ef7.png)
 
 
 ## Esivaatimukset
