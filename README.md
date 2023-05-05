@@ -59,6 +59,7 @@ Kun herra-orja-arkkitehtuuri on saatu kuntoon, tulee ```mistermaster``` koneella
 Ohjeet palvelimien sovelluksien jatkokonfigurointiin on toimitettu Linux koneilla kansioon ```/home/vagrant/``` ja Windows koneella ```C:\Admin```. 
 
 ## Huomiot
+- Windows koneen provisointi jäätyy välillä -> korjauksena on poistaa kone virtualboxin kautta ja ajaa ```vagrant up``` uudelleen
 - Windows kone saattaa jäätyä välillä ja sen joutuu uudelleenkäynnistämään - (v0.1)
 - Minion did not return. [No response] - tulee aina välillä -> korjauksena on ajaa komento vain uudelleen
 
