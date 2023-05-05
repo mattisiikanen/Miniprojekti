@@ -15,13 +15,13 @@ Linux VMs:
 - CPU: 2 CPU
 - RAM: 512Mb
 - HDD: 20Gb
-- OS: Debian
+- OS: Debian 11
 
 Windows VM:
 - CPU: 4 CPU
 - RAM: 8Gb 
 - HDD: 60Gb
-- OS: Windows Server 2022
+- OS: Windows Server 2022 Standard
 
 
 ## Tarkoitus
