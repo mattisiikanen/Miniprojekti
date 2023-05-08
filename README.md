@@ -80,7 +80,7 @@ Palvelimilla olevien sovelluksien käyttöönoton ja konfiguroinnin ohjeet on to
 - Siikanen, Matti, 18.4.2023, h6_based - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md)
 - HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
-- SaltStack, 4.4.2023, vTHE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
+- SaltStack, 4.4.2023, THE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
 - Karvinen, Tero, Control Windows with Salt, 18.4.2018 - (https://terokarvinen.com/2018/control-windows-with-salt/)
 - Mumble, 4.6.2020, Installing Mumble - (https://wiki.mumble.info/wiki/Installing_Mumble#Linux)
 - Mumble, 26.1.2021, Murmurguide - (https://wiki.mumble.info/wiki/Murmurguide)
