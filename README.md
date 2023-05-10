@@ -26,6 +26,8 @@ Windows VM:
 
 ## Tarkoitus
 Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön sekä Active Directory että Print Server roolit, joilla hoidetaan identiteetin ja tulostimien hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. Provisioinnin aikana luodaan yhteensä 4 virtuaalikonetta + 1 virtuaaliverkko Saltin hallintaa varten. ```Mistermaster``` koneelle kopioidaan kaikki hallintaan tarvittavat ```.sls``` tiedostot kansioon ```/srv/salt```. Arkkitehtuuri on suunniteltu siten, että se asentaa valmiiksi tarvittavat työkalut ja jättää ylläpitäjälle mahdollisuuden konfiguroida  ympäristön itse loppuun. Olen päätöksellä jättää tarkemmat konfiguraatiot ylläpitäjälle takaa sitä, että kyseistä pohjaa ei ole suunniteltu ainaoastaan yhteen käyttöön, vaan että sitä voisi käyttää muutkin.
+Olen käyttänyt seuraavia omia harjoitteitani hyödykseni tämän projektin suunnittelussa ja käyttöönotossa:
+- [H5 vaihtoehdot](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H5.md)
 
 
 Palvelimet:
@@ -78,6 +80,7 @@ Palvelimilla olevien sovelluksien käyttöönoton ja konfiguroinnin ohjeet on to
 - Karvinen, Tero, 28.3.2023, Salt Vagrant - automatically provision one master and two slaves - (https://terokarvinen.com/2023/salt-vagrant/)
 - Siikanen, Matti, 18.4.2023, H5 - Hello Web - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H5.md)
 - Siikanen, Matti, 18.4.2023, h6_based - (https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md)
+- Siikanen Matti, 28.4.2023, H5 Vaihtoehdot - (https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H5.md)
 - HashiCorp Vagrant Cloud, Gusztáv Varga, 16.4.2023 - gusztavvargadr/windows-server Vagrant box - (https://app.vagrantup.com/gusztavvargadr/boxes/windows-server)
 - ClaySheck, 9.10.2020, Github  - (https://github.com/clayshek/salt-vagrant-windows/blob/main/Vagrantfile)
 - SaltStack, 4.4.2023, THE TOP FILE - (https://docs.saltproject.io/en/latest/ref/states/top.html)
@@ -85,3 +88,4 @@ Palvelimilla olevien sovelluksien käyttöönoton ja konfiguroinnin ohjeet on to
 - Mumble, 4.6.2020, Installing Mumble - (https://wiki.mumble.info/wiki/Installing_Mumble#Linux)
 - Mumble, 26.1.2021, Murmurguide - (https://wiki.mumble.info/wiki/Murmurguide)
 - Hill, Paul, 18.2.2021, Promote a Server to a Domain Controller - (https://www.serveracademy.com/blog/promote-a-server-to-a-domain-controller/)
+
