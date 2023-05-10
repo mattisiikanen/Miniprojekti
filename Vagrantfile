@@ -30,8 +30,9 @@ echo "See also: https://github.com/mattisiikanen/Miniprojekti"
 MINION
 
 
-# Define the ruleset used in Vagrant and the base VM box
+# Define the ruleset used in Vagrant, the base VM box & message for up state.
 Vagrant.configure("2") do |config|
+config.vm.post_up_message = "Check out my project from: https://github.com/mattisiikanen/Miniprojekti"
 config.vm.box = "debian/bullseye64"
 
 
