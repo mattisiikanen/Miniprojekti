@@ -46,7 +46,7 @@ Looginen näkymä ympäristöstä: </br>
 ![Infra](https://user-images.githubusercontent.com/122887740/236485392-289c3991-2de5-49c6-8a6d-01f263354ef7.png)
 
 
-Olen käyttänyt seuraavia omia harjoitteitani hyödykseni tämän projektin suunnittelussa ja käyttöönotossa:
+Olen käyttänyt seuraavia omia harjoituksia hyödykseni tämän projektin suunnittelussa sekä käyttöönotossa:
 Kurssi ICI003AS2A-3002:
 - [H5 - Hello Web](https://github.com/mattisiikanen/linuxkurssi/blob/main/H5.md) <- Apachen käyttöönotto osa 1
 - [H6 - Based](https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md) <- Apachen käyttöönotto osa 2
