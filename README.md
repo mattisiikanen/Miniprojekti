@@ -1,6 +1,7 @@
 # Miniprojekti
 Repo on kurssia palvelinten hallinta (ICI001AS3A-3001) varten. Miniprojektin tarkoituksena on pystyttää mielikuvitus yritykselle nimeltä Yritys Oy palvelininfra (herraorja-arkkitehtuurilla), jossa on sekä Linux että Windows palvelimia käytössä ja jokaisella palvelimella on oma tarkoituksensa osana infraa. Kokonaisuutta hallitaan Salt Vagrantilla.
 
+
 ## Ympäristö
 
 Host:
@@ -26,14 +27,6 @@ Windows VM:
 
 ## Tarkoitus
 Tarkoituksena on luoda yksi palvelin yrityksen keskusteluita ja palavereja varten käyttäen Mumblea, toinen palvelin hoitaa Apachella yrityksen kotisivut ja Windows palvelimelle on tarkoitus ottaa käyttöön sekä Active Directory että Print Server roolit, joilla hoidetaan identiteetin ja tulostimien hallinta. Infrastruktuuria hallitaan kokonaisuudessaan Linux master koneella. Virtualisointialustana toiimi Oracle VM VirtualBox Manager. Infrastruktuuria varten otin lainaan opettajamme Tero Karvisen pohjan herraorja-arkkitehtuurista, Windows VM:ää varten Gusztáv Vargan Vagrant Boxin sekä ClayShakin artikkeleista / ohjeista mallia ```vagrantfile``` tiedoston luontiin. Provisioinnin aikana luodaan yhteensä 4 virtuaalikonetta + 1 virtuaaliverkko Saltin hallintaa varten. ```Mistermaster``` koneelle kopioidaan kaikki hallintaan tarvittavat ```.sls``` tiedostot kansioon ```/srv/salt```. Arkkitehtuuri on suunniteltu siten, että se asentaa valmiiksi tarvittavat työkalut ja jättää ylläpitäjälle mahdollisuuden konfiguroida  ympäristön itse loppuun. Olen päätöksellä jättää tarkemmat konfiguraatiot ylläpitäjälle takaa sitä, että kyseistä pohjaa ei ole suunniteltu ainaoastaan yhteen käyttöön, vaan että sitä voisi käyttää muutkin.
-Olen käyttänyt seuraavia omia harjoitteitani hyödykseni tämän projektin suunnittelussa ja käyttöönotossa:
-- [H5 - Hello Web](https://github.com/mattisiikanen/linuxkurssi/blob/main/H5.md) <- Apachen käyttöönotto osa 1
-- [H6 - Based](https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md) <- Apachen käyttöönotto osa 2
-- [H1 - Suolaa](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H1.md) <- Salt Vagrantin käyttöönotto ja testiympäristön luonti
-- [H2 - Demonit](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H2.md) <- Daemonien hallintaa Saltilla
-- [H3 - Git](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H3.md) <- Git käyttöönotto ja käyttö
-- [H4 - Komennus](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H4.md) <- Oman komennon käyttöönotto saltilla
-- [H5 - vaihtoehdot](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H5.md) <- Windows palvelimen käyttöönotto minioniksi
 
 
 Palvelimet:
@@ -51,6 +44,19 @@ Verkko:
 
 Looginen näkymä ympäristöstä: </br>
 ![Infra](https://user-images.githubusercontent.com/122887740/236485392-289c3991-2de5-49c6-8a6d-01f263354ef7.png)
+
+
+Olen käyttänyt seuraavia omia harjoitteitani hyödykseni tämän projektin suunnittelussa ja käyttöönotossa:
+Kurssi ICI003AS2A-3002:
+- [H5 - Hello Web](https://github.com/mattisiikanen/linuxkurssi/blob/main/H5.md) <- Apachen käyttöönotto osa 1
+- [H6 - Based](https://github.com/mattisiikanen/linuxkurssi/blob/main/H6.md) <- Apachen käyttöönotto osa 2
+
+Kurssi ICI001AS3A-3001:
+- [H1 - Suolaa](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H1.md) <- Salt Vagrantin käyttöönotto ja testiympäristön luonti
+- [H2 - Demonit](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H2.md) <- Daemonien hallintaa Saltilla
+- [H3 - Git](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H3.md) <- Git käyttöönotto ja käyttö
+- [H4 - Komennus](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H4.md) <- Oman komennon käyttöönotto saltilla
+- [H5 - vaihtoehdot](https://github.com/mattisiikanen/Palvelintenhallinta/blob/main/H5.md) <- Windows palvelimen käyttöönotto minioniksi
 
 
 ## Esivaatimukset
