@@ -3,6 +3,10 @@ active_directory:
   win_servermanager.installed:
     - recurse: True
     - name: AD-Domain-Services
+
+print-server:
+  win_servermanager.installed:
+    - recurse: True
     - name: Print-Server
 
 # Create a folder c:\admin
